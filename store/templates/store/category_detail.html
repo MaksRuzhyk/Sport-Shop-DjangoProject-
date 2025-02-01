@@ -1,0 +1,16 @@
+{% extends 'store/index.html' %}
+{% block title %}
+	{{ category.title }}
+{% endblock title %}
+{% block content %}
+{%if category.products.all|length == 0%}
+    <h1>Товари з категорії "{{ category.title }}": на даний момент відсутні</h1>
+{% else %}
+    <h1>Товари з категорії "{{ category.title }}":</h1>
+
+        {% for product in category.products.all %}
+            {% include 'store/includes/card_group.html' %}
+        {% endfor %}
+{%endif%}
+
+{% endblock content %}

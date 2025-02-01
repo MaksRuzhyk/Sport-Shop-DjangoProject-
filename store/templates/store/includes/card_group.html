@@ -1,0 +1,17 @@
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+    <a href="{{ product.get_absolute_url }}">
+        {% include 'store/includes/image.html' %}
+
+    </a>
+    <div class="card-body">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text">{{ product.info|truncatewords:10 }}</p>
+        <h4 class="card-text">{{ product.price }}</h4>
+        <ul class="category_list">
+            {% for category in product.categories.all %}
+            <li><a href="{{ category.get_absolute_urls }}">{{ category.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

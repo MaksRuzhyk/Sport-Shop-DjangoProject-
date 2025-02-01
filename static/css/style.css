@@ -1,0 +1,44 @@
+.logo {
+    width: 50px;
+    border-radius: 100%;
+}
+
+.category_list {
+    display: flex;
+    gap: 7px;
+    list-style: none;
+    padding: 0;
+}
+
+.category_list a {
+    text-decoration: none;
+    color: burlywood;
+}
+
+
+.footer {
+    min-height: 80px;
+}
+
+.column-x {
+    column-count: 3;
+}
+
+@media (max-width: 768px){
+    .column-x {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 540px){
+    .column-x {
+        column-count: 1;
+    }
+}
+
+.product-image {
+    max-width: 500px; /* або будь-яке інше значення */
+    height: auto; /* Щоб зберегти пропорції */
+    display: block;
+    margin: 0 auto; /* Центрування */
+}

@@ -1,0 +1,10 @@
+{% extends 'store/index.html' %}
+{% block title %}
+	Products
+{% endblock title %}
+{% block content %}
+        {% for product in product_list %}
+            {% include 'store/includes/card_group.html' %}
+        {% endfor %}
+
+{% endblock content %}
